@@ -75,7 +75,7 @@ python main.py --noise_power_levels -110,-120,-130
 | `max_distance`       | Size of the 2D area (square region)                                      | 250              |
 | `noise_power_levels` | List of noise power levels to simulate AWGN                              | [-114,...,-174]  |
 | `bw`                 | Bandwidth of the signal (Hz)                                              | 10,000,000       |
-| `P`                  | Transmission power (watts)                                                | 23               |
+| `P`                  | Transmission power (dBm)                                                | 23               |
 | `beta`               | Path loss constant (environment-specific)                                | 10^3.453         |
 | `alfa`               | Path loss exponent                                                        | 3.8              |
 | `variance`           | Variance used for shadowing/fading                                       | 7.9              |
