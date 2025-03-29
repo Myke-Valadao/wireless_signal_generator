@@ -29,6 +29,7 @@ wireless_signal_generator/
 │   ├── utils.py                  # Helper functions (noise, distance)
 │   └── generator.py              # Core logic to generate wireless signal data
 ├── main.py                       # CLI interface using argparse
+├── visualize.py                  # Script to visualize signal data
 ├── requirements.txt              # Project dependencies
 └── README.md                     # You're here!
 ```
@@ -91,6 +92,7 @@ python main.py --noise_power_levels -110,-120,-130
 - **`src/config.py`**: Contains the default parameters for simulation.
 - **`src/utils.py`**: Implements utility functions for distance and AWGN noise modeling.
 - **`src/generator.py`**: Core logic. Computes distances, generates signals, adds noise, saves CSV.
+- **`visualize.py`**: Allows visualization of generated signals by label, FFT, and noise comparison.
 
 ---
 
@@ -125,8 +127,6 @@ Each row in the CSV represents one signal:
 - Spectrum sensing and dynamic channel allocation
 - Noise resilience testing
 
-
-
 ---
 
 ## 🔢 How Many Signals Are Generated?
@@ -151,7 +151,51 @@ If `data_size = 10` and `noise_power_levels = [-114, -124, ..., -174]` (7 levels
 Each row in the CSV file represents **one signal**, but due to the complex signal array stored as a string, it may visually span multiple lines when opened in text editors or Excel.  
 To get the true number of signals, use `len(df)` in pandas.
 
+---
 
+## 📈 Signal Visualization
+
+You can visualize the generated signals using the provided `visualize.py` script. It supports:
+
+- **Sequential inspection** of signals (time and frequency domain)
+- **Spectral visualization (FFT)**
+- **Noise level comparison**
+- **Label filtering** (BP or BA)
+
+### ▶️ Run the Visualizer
+
+```bash
+python visualize.py --csv_path data/wireless_signals.csv --mode loop
+```
+
+### 🧪 Visualization Modes
+
+| Mode     | Description                                                           |
+|----------|-----------------------------------------------------------------------|
+| `loop`   | Shows signals one-by-one (real/imaginary and FFT)                     |
+| `compare`| Compares FFT of signals with different noise levels side-by-side      |
+
+### 🔍 Optional Arguments
+
+- `--label BP` or `--label BA` to filter by band
+- `--csv_path <path>` to specify the signal file (required)
+
+### 💡 Examples
+
+1. **Visualize all signals:**
+   ```bash
+   python scripts/visualize.py --csv_path data/wireless_signals.csv --mode loop
+   ```
+
+2. **Visualize only BP signals:**
+   ```bash
+   python scripts/visualize.py --csv_path data/wireless_signals.csv --mode loop --label BP
+   ```
+
+3. **Compare signals across noise levels (BP only):**
+   ```bash
+   python scripts/visualize.py --csv_path data/wireless_signals.csv --mode compare --label BP
+   ```
 
 ---
 
@@ -159,15 +203,14 @@ To get the true number of signals, use `len(df)` in pandas.
 
 Feel free to fork the repository, suggest improvements, or contribute features!
 
+---
 
 ## 📚 References
-
-The following scientific publications are associated with or inspired this project:
 
 ```bibtex
 @article{valadao2021deep,
   title={Deep cooperative spectrum sensing based on residual neural network using feature extraction and random forest classifier},
-  author={Valad{\~a}o, Myke DM and Amoedo, Diego and Costa, Andr{\'e} and Carvalho, Celso and Sabino, Waldir},
+  author={Valad{\~a}o, Myke DM and Amoedo, Diego and Costa, Andr{'e} and Carvalho, Celso and Sabino, Waldir},
   journal={Sensors},
   volume={21},
   number={21},
@@ -178,7 +221,7 @@ The following scientific publications are associated with or inspired this proje
 
 @inproceedings{valadao2022cooperative,
   title={Cooperative spectrum sensing system using residual convolutional neural network},
-  author={Valad{\~a}o, Myke DM and Amoedo, Diego A and Pereira, Ant{\^o}nio MC and Tavares, Samuel A and Furtado, Rafael S and Carvalho, Celso B and Da Costa, Andr{\'e} LA and J{\'u}nior, Waldir SS},
+  author={Valad{\~a}o, Myke DM and Amoedo, Diego A and Pereira, Ant{\^o}nio MC and Tavares, Samuel A and Furtado, Rafael S and Carvalho, Celso B and Da Costa, Andr{'e} LA and J{'u}nior, Waldir SS},
   booktitle={2022 IEEE International Conference on Consumer Electronics (ICCE)},
   pages={1--5},
   year={2022},
@@ -187,9 +230,9 @@ The following scientific publications are associated with or inspired this proje
 
 @article{valadao2024noise,
   title={Noise Power Density Estimation Based on Deep Learning Using Spectrograms Extracted from Wireless Signals},
-  author={Valad{\~a}o, Myke and Costa, Andr{\'e} and Amoedo, Diego and Carvalho, Celso},
+  author={Valad{\~a}o, Myke and Costa, Andr{'e} and Amoedo, Diego and Carvalho, Celso},
   journal={ResearchGate Preprint},
   year={2024},
   url={https://www.researchgate.net/publication/384913613}
 }
-
+```
