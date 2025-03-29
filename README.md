@@ -155,11 +155,16 @@ To get the true number of signals, use `len(df)` in pandas.
 
 ---
 
+## 🤝 Contributions
+
+Feel free to fork the repository, suggest improvements, or contribute features!
+
 
 ## 📚 References
 
 The following scientific publications are associated with or inspired this project:
 
+```bibtex
 @article{valadao2021deep,
   title={Deep cooperative spectrum sensing based on residual neural network using feature extraction and random forest classifier},
   author={Valad{\~a}o, Myke DM and Amoedo, Diego and Costa, Andr{\'e} and Carvalho, Celso and Sabino, Waldir},
@@ -187,9 +192,4 @@ The following scientific publications are associated with or inspired this proje
   year={2024},
   url={https://www.researchgate.net/publication/384913613}
 }
-
-
-## 🤝 Contributions
-
-Feel free to fork the repository, suggest improvements, or contribute features!
 
