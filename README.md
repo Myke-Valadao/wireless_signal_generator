@@ -22,14 +22,14 @@ The simulation models:
 
 ```
 wireless_signal_generator/
-├── data/                         # Output CSV files
 ├── src/
 │   ├── __init__.py
 │   ├── config.py                 # Default parameters for the simulation
 │   ├── utils.py                  # Helper functions (noise, distance)
 │   └── generator.py              # Core logic to generate wireless signal data
-├── main.py                       # CLI interface using argparse
-├── visualize.py                  # Script to visualize signal data
+├── scripts/
+    └── visualize.py              # Script to visualize signal data
+├── main.py                       # CLI interface using argparse                 
 ├── requirements.txt              # Project dependencies
 └── README.md                     # You're here!
 ```
