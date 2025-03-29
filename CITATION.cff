@@ -1,0 +1,68 @@
+cff-version: 1.2.0
+message: "If you use this dataset or generator in your research, please cite the following works:"
+title: "Wireless Signal Generator with Noise and Distance Modeling"
+authors:
+  - family-names: Valadão
+    given-names: Myke D. M.
+    orcid: https://orcid.org/0000-0001-7595-2266
+date-released: 2025-03-29
+url: https://github.com/mykevaladao/wireless_signal_generator
+references:
+  - type: article
+    title: "Deep cooperative spectrum sensing based on residual neural network using feature extraction and random forest classifier"
+    authors:
+      - family-names: Valadão
+        given-names: Myke DM
+      - family-names: Amoedo
+        given-names: Diego
+      - family-names: Costa
+        given-names: André
+      - family-names: Carvalho
+        given-names: Celso
+      - family-names: Sabino
+        given-names: Waldir
+    journal: Sensors
+    volume: 21
+    number: 21
+    pages: 7146
+    year: 2021
+    publisher: MDPI
+
+  - type: conference-paper
+    title: "Cooperative spectrum sensing system using residual convolutional neural network"
+    authors:
+      - family-names: Valadão
+        given-names: Myke DM
+      - family-names: Amoedo
+        given-names: Diego A
+      - family-names: Pereira
+        given-names: Antônio MC
+      - family-names: Tavares
+        given-names: Samuel A
+      - family-names: Furtado
+        given-names: Rafael S
+      - family-names: Carvalho
+        given-names: Celso B
+      - family-names: Da Costa
+        given-names: André LA
+      - family-names: Júnior
+        given-names: Waldir SS
+    conference: 2022 IEEE International Conference on Consumer Electronics (ICCE)
+    pages: "1-5"
+    year: 2022
+    publisher: IEEE
+
+  - type: article
+    title: "Noise Power Density Estimation Based on Deep Learning Using Spectrograms Extracted from Wireless Signals"
+    authors:
+      - family-names: Valadão
+        given-names: Myke
+      - family-names: Costa
+        given-names: André
+      - family-names: Amoedo
+        given-names: Diego
+      - family-names: Carvalho
+        given-names: Celso
+    journal: ResearchGate Preprint
+    year: 2024
+    url: "https://www.researchgate.net/publication/384913613"
