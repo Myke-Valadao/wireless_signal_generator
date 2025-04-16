@@ -11,7 +11,7 @@ def generate_data(
     records = []
 
     for _ in range(data_size):
-        d, su_init, pu_pos = compute_distance(seconds, speed, samples_second, max_distance)
+        d, su_init, pu_init, _, _ = compute_distance(seconds, speed, samples_second, max_distance)
         h = np.random.normal(0, variance, seconds * samples_second)
         k = np.sqrt(P / (beta * (np.array(d) ** alfa) * 10 ** (h / 10)))
 
