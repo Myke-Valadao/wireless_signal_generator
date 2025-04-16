@@ -9,7 +9,7 @@ This project simulates wireless signal transmissions, generating synthetic signa
 The simulation models:
 
 - A **Secondary User (SU)** moving through a 2D space over time.
-- A **Primary User (PU)** placed at a fixed random location.
+- A **Primary User (PU)** moving through a 2D space over time.
 - **Signal propagation** affected by distance, fading, and noise.
 - Two types of signals:
   - **BP** (Main Band)
