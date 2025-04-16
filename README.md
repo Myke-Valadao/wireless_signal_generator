@@ -219,4 +219,14 @@ Feel free to fork the repository, suggest improvements, or contribute features!
   publisher={MDPI}
 }
 
+@article{valadao2025predicting,
+  title={Predicting Noise and User Distances from Spectrum Sensing Signals Using Transformer and Regression Models},
+  author={Valad{\~a}o, Myke and Amoedo, Diego and Costa, Andr{\'e} and Carvalho, Celso and Sabino, Waldir},
+  journal={Applied Sciences},
+  volume={15},
+  number={8},
+  pages={4296},
+  year={2025},
+  publisher={MDPI}
+}
 ```
