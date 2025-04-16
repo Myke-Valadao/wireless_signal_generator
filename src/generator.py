@@ -6,12 +6,12 @@ from .utils import compute_distance, awgn_noise
 def generate_data(
     seconds, samples_second, speed, max_distance,
     noise_power_levels, bw, P, beta, alfa, variance, n,
-    data_size, output_path
+    data_size, max_angle_rate, output_path
 ):
     records = []
 
     for _ in range(data_size):
-        d, su_init, pu_init, _, _ = compute_distance(seconds, speed, samples_second, max_distance)
+        d, su_init, pu_init = compute_distance(seconds, speed, max_angle_rate, samples_second, max_distance)
         h = np.random.normal(0, variance, seconds * samples_second)
         k = np.sqrt(P / (beta * (np.array(d) ** alfa) * 10 ** (h / 10)))
 

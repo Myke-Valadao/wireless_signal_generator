@@ -1,3 +1,4 @@
+import math
 # Parâmetros padrão do sistema
 
 DEFAULTS = {
@@ -13,5 +14,6 @@ DEFAULTS = {
     "variance": 7.9,
     "n": 0.01,
     "data_size": 10,
+    "max_angle_rate": math.pi,
     "output_path": "data/wireless_signals.csv"
 }
